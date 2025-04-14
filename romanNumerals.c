@@ -30,7 +30,7 @@ int main(){
     int translatedValueOutput = 0;
     // cin will be used here as roman numerals have no spaces.
     cin >> romanNumInput; 
-    // start timer
+    // start timer. Happens after input
     auto start = std::chrono::high_resolution_clock::now();
     /*
     We are checking if there are numeral pairs like "IV "or "XC" that don't follow
@@ -38,8 +38,15 @@ int main(){
     next numeral with i++.
     */
     if (romanNumInput.size() == 1){
+        /*
+            If it is just a single char, translate it and instantly return. <0.01ms 
+        */
         translatedValueOutput = valuesTable[romanNumInput[0]];
-        
+        // stop timer
+        auto end = std::chrono::high_resolution_clock::now();
+        std::chrono::duration<double, std::milli> diff = end - start;
+        std::cout << "\nExecution time: " << diff.count() << " ms\n";
+        return 0;
     } else {
         for (int i=0; i<romanNumInput.size(); i++){
             if (romanNumInput[i] == 'I' && romanNumInput[i+1] == 'V'){
