@@ -41,7 +41,7 @@ int main(){
         /*
             If it is just a single char, translate it and instantly return. <0.01ms 
         */
-        translatedValueOutput = valuesTable[romanNumInput[0]];
+        cout << valuesTable[romanNumInput[0]];
         // stop timer
         auto end = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::milli> diff = end - start;
