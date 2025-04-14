@@ -34,7 +34,8 @@ int main(){
     auto start = std::chrono::high_resolution_clock::now();
     /*
     We are checking if there are numeral pairs like "IV "or "XC" that don't follow
-    normal addition rules. i is then incremented by 1 to skip the second numeral.
+    normal addition rules. If one is identified, add the value of it and skip the 
+    next numeral with i++.
     */
     if (romanNumInput.size() == 1){
         translatedValueOutput = valuesTable[romanNumInput[0]];
@@ -67,8 +68,13 @@ int main(){
             }
             else {
                 translatedValueOutput += valuesTable[romanNumInput[i]];
-            } // bc this is at the end, it forces the program to run everything else,
-            // which takes longer
+            } 
+            /*  Bc this one is at the end of all the others, it will only get executed 
+                after all the conditions for the previous ones were checked, which means
+                the program may be slightly unoptimized. The avg run time is always 
+                around 0.017ms, but never more than 0.03ms. Not sure what benchmarks the 
+                competition is working with, I don't know if that's fast or not. 
+            */
         }
     }
     cout << translatedValueOutput;
