@@ -1,0 +1,64 @@
+1. Science Hall 1 to...
+    * Academic Hall: 75 ft
+    * Markstein Hall: 275 ft
+    * University Hall: 380 ft
+    * Social and Behavioral Sciences Buidling: 1304 ft
+    * Kellogg Library: 576 ft
+    * Science Hall 2: 1304 ft
+    * Extended Learning Building: 2697 ft
+2. Academic Hall to...
+    * Science Hall 1: 75 ft
+    * Markstein Hall: 270 ft
+    * University Hall: 283 ft
+    * Social and Behavioral Sciences Buidling: 1153 ft
+    * Kellogg Library: 587 ft
+    * Science Hall 2: 1163 ft
+    * Extended Learning Building: 2615 ft
+3. Markstein Hall to...
+    * Science Hall 1: 275 ft
+    * Academic Hall: 270 ft
+    * University Hall: 359 ft
+    * Social and Behavioral Sciences Buidling: 1114 ft
+    * Kellogg Library: 693 ft
+    * Science Hall 2: 1137 ft
+    * Extended Learning Building: 2532 ft
+4. University Hall to...
+    * Science Hall 1: 380 ft
+    * Academic Hall: 283 ft
+    * Markstein Hall: 359 ft
+    * Social and Behavioral Sciences Buidling: 877 ft
+    * Kellogg Library: 328 ft
+    * Science Hall 2: 892 ft
+    * Extended Learning Building: 2297 ft
+5. Social and Behavioral Sciences Building to...
+    * Science Hall 1: 1304 ft
+    * Academic Hall: 1153 ft
+    * Markstein Hall: 1114 ft
+    * University Hall: 877 ft
+    * Kellogg Library: 823 ft
+    * Science Hall 2: 133 ft
+    * Extended Learning Building: 1922 ft
+6. Kellogg Library to...
+    * Science Hall 1: 576 ft
+    * Academic Hall: 587 ft
+    * Markstein Hall: 693 ft
+    * University Hall: 328 ft
+    * Social and Behavioral Sciences Buidling: 823 ft
+    * Science Hall 2: 831 ft
+    * Extended Learning Building: 2236 ft
+7. Science Hall 2 to...
+    * Science Hall 1: 1304 ft
+    * Academic Hall: 1163 ft
+    * Markstein Hall: 1137 ft
+    * University Hall: 892 ft
+    * Social and Behavioral Sciences Buidling: 133 ft
+    * Kellogg Library: 831 ft
+    * Extended Learning Building: 1937 ft
+8. Extended Learning Building to...
+    * Science Hall 1: 2697 ft
+    * Academic Hall: 2615 ft
+    * Markstein Hall: 2532 ft
+    * University Hall: 2297 ft
+    * Social and Behavioral Sciences Buidling: 1922 ft
+    * Kellogg Library: 2236 ft
+    * Science Hall 2: 1937 ft
