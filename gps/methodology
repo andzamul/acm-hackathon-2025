@@ -21,6 +21,7 @@ A loop that asks:
    8) Extended Learning Building "
 
 and et cetera for all 8 classes. This way we will build their schedule. 
+NOTE: For each building chosen, we will have to remove it from the list of available buildinga for the next class as you can't go to the same building twice.
 
 LOOP FOR WALKING IN BETWEEN BUILDINGS
 Once we have the user's schedule, we will run a loop 7 times that checks:
