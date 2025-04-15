@@ -23,7 +23,7 @@ int main(){
                 cout << "Original prompt:" << endl;
                 cout << "Allen has mistaken me for his friend Marcus Halberstam. It seems logical because Marcus also works at P&P and in fact does the same exact thing I do and he also has a penchant for Valentino suits and Oliver Peoples glasses. Marcus and I even go to the same barber, although I have a slightly better haircut." << endl;
                 cout << endl;
-                cout << "Cavemanese:" << endl;
+                cout << "Optimized cavemanese:" << endl;
                 cout << "Allen think me Marcus. Marcus work same job me do P&P. Marcus and me think suits and glasses good. Marcus hair like me, but less good." << endl;
                 cout << endl;
                 break;
@@ -33,7 +33,7 @@ int main(){
                 cout << "Original prompt:" << endl;
                 cout << "As you all know, first prize is a Cadillac Eldorado. Anybody wanna see second prize? Second prize's a set of steak knives. Third prize is you're fired." << endl;
                 cout << endl;
-                cout << "Cavemanese:" << endl;
+                cout << "Optimized cavemanese:" << endl;
                 cout << "Prize one chairs on wheels. Prize two? Prize two meat knives. Prize three you go." << endl;
                 cout << endl;
                 break;
@@ -43,7 +43,7 @@ int main(){
                 cout << "Original prompt:" << endl;
                 cout << "The good news is Vinnie, you're not going to care cause you're gonna make so much money. That's what I get out of it. Wanna know what you get out of it? You get the ice cream, the hot fudge, the banana and the nuts. Right now I get the sprinkles, and you- if this goes through, I get the cherry. But you get the sundae, Vinny. You get the sundae." << endl;      
                 cout << endl;
-                cout << "Cavemanese:" << endl;
+                cout << "Optimized cavemanese:" << endl;
                 cout << "Vinnie, you no care, you be rich. Me understand. What you get? Ice milk, cocoa, banana, nuts. Now me get sprinkles, later get cherry. But you get treat." << endl;
                 cout << endl;
                 break;
@@ -53,7 +53,7 @@ int main(){
                 cout << "Original prompt:" << endl;
                 cout << "And I'll bet what you hated the most was that they identified me as a co-founder of Facebook, which I am. You better lawyer up asshole, because I'm not coming back for 30%, I'm coming back for everything." << endl;
                 cout << endl;
-                cout << "Cavemanese:" << endl;
+                cout << "Optimized cavemanese:" << endl;
                 cout << "You hate that me help make book of faces. You find smart law man, me hunt all." << endl;
                 cout << endl;
                 break; 
@@ -63,7 +63,7 @@ int main(){
                 cout << "Original prompt:" << endl;
                 cout << "Because the man who makes an appearance in the business world, the man who creates personal interest, is the man who gets ahead. Be liked and you will never want. I never have to wait in line to see a buyer." << endl;
                 cout << endl;
-                cout << "Cavemanese:" << endl;
+                cout << "Optimized cavemanese:" << endl;
                 cout << "Man work, man work good, man go far. Man liked, man not want. I not wait for man buying." << endl;
                 cout << endl;
                 break;
