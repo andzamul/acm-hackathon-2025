@@ -1,0 +1,116 @@
+CREATING SCHEDULE
+We will ask the user for input to find what order they have the 8 classes.
+A loop that asks:
+"Class 1 (starting position): " 
+"  1) Science Hall 1
+   2) Science Hall 2
+   3) Markstein Hall
+   4) University Hall
+   5) Academic Hall
+   6) Social and Behaviorial Sciences Hall
+   7) Kellogg Library
+   8) Extended Learning Building "
+"Class 2: " 
+"  1) Science Hall 1
+   2) Science Hall 2
+   3) Markstein Hall
+   4) University Hall
+   5) Academic Hall
+   6) Social and Behaviorial Sciences Hall
+   7) Kellogg Library
+   8) Extended Learning Building "
+
+and et cetera for all 8 classes. This way we will build their schedule. 
+
+LOOP FOR WALKING IN BETWEEN BUILDINGS
+Once we have the user's schedule, we will run a loop 7 times that checks:
+iteration 1: starting pos -> class 2
+iteration 2: class 2 -> class 3
+iteration 3: class 3 -> class 4
+iteration 4: class 4 -> class 5
+iteration 5: class 5 -> class 6
+iteration 6: class 6 -> class 7
+iteration 7: class 7 -> class 8
+iteration 8: class 8 -> starting pos
+
+TOP FLOOR CONCERNS
+The instructions specify that all the classes are at the top of the buildings. In the "elevations" file, there is all the elevations of the buildings' bottom floors and top floors. The "example.txt" file that the hosts uploaded show going from the top to the bottom and vice versa count as a node path, so we will not simply add the distances but have them as a separate node associated with each building. so to go to a class in Markstein Hall for example you must:
+"Markstein Hall bottom to top path: __ ft"
+Then the student also has to come back to the bottom floor to get to the next building.
+"Markstein Hall top to bottom path: __ ft"
+
+WRITE CODE IN METERS
+Additionally, you may have noticed I took all the measurements in feet. The challenge specifies that they want it all in meters, which is no big deal as we can convert feet -> meters when coding the challenge.
+
+STRUCTURE BASED ON EXAMPLE
+We must first calculate the total distance and then output the paths + distances.
+Example schedule input:
+1) Science Hall 1
+2) Kellogg Library
+3) Social and Behavioral Sciences Building
+4) Extended Learning Building
+5) Academic Hall
+6) Markstein Hall
+7) Science Hall 2
+8) University Hall
+
+Example schedule output (pretend it is all in meters):
+" 
+Total distance: 9203 ft
+
+Paths:
+    Class 1)
+    Science Hall 1 bottom to top: 17 ft
+    Science Hall 1 top to bottom: 17 ft
+
+    Science Hall 1 to Kellogg Library: 576 ft
+
+    Class 2)
+    Kellogg Library bottom to top: 29 ft
+    Kellogg Library top to bottom: 29 ft
+
+    Kellogg Library to Social and Behavioral Sciences Building: 823 ft
+
+    Class 3)
+    Social and Behavioral Sciences Building bottom to top: 38 ft
+    Social and Behavioral Sciences Building top to bottom: 38 ft
+
+    Social and Behavioral Science Building to Extended Learning Building: 1922 ft
+
+    Class 4)
+    Extended Learning Building bottom to top: 85 ft
+    Extended Learning Building top to bottom: 85 ft
+
+    Extended Learning Building to Academic Hall: 2615 ft
+
+    Class 5)
+    Academic Hall bottom to top: 23 ft
+    Academic Hall top to bottom: 23 ft
+
+    Academic Hall to Markstein Hall: 270 ft
+
+    Class 6)
+    Markstein Hall bottom to top: 45 ft
+    Markstein Hall top to bottom: 45 ft
+
+    Markstein Hall to Science Hall 2: 1137 ft
+
+    Class 7)
+    Science Hall 2 bottom to top: 12 ft
+    Science Hall 2 top to bottom: 12 ft
+
+    Science Hall 2 to University Hall: 892 ft
+
+    Class 8)
+    University Hall bottom to top: 45 ft
+    University Hall top to bottom: 45 ft
+
+    Returning to start)
+    University Hall to Science Hall 1: 380 ft
+"
+
+QUESTIONS
+I am not sure how they want us to factor in x, y, z components to distances; a distance is just a single vector value between two points. Do they mean they want all the possible points to have x,y,z values? The instructions delineate "all distances have x, y, and z components." 
+
+ADDITIONAL MAP
+We have to mark up on a map of the campus all the paths between the buildings. Since I derived the distances from Google maps distance measuring, I (andrew) can make the map of the pathways I drew.
