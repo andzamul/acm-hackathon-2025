@@ -13,7 +13,6 @@ A loop that asks:
 "Class 2: " 
 "  1) Science Hall 1
    2) Science Hall 2
-   3) Markstein Hall
    4) University Hall
    5) Academic Hall
    6) Social and Behaviorial Sciences Hall
@@ -25,7 +24,7 @@ NOTE: For each building chosen, we will have to remove it from the list of avail
 
 LOOP FOR WALKING IN BETWEEN BUILDINGS
 Once we have the user's schedule, we will run a loop 7 times that checks:
-iteration 1: starting pos -> class 2
+iteration 1: starting pos (class 1) -> class 2
 iteration 2: class 2 -> class 3
 iteration 3: class 3 -> class 4
 iteration 4: class 4 -> class 5
