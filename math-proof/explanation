@@ -1,1 +1,4 @@
-cvbnm
+For this project, we tackled the problem by first understanding what the problem was asking for which was k=p+2(n)^2. 
+We broke down this problem by breaking down this equation first we must understand K is a number given by the user this was a key concept that allowed the program to work efficiently, this is because we would make a program that doesn't check all possible numbers infinitely.
+This K is a limit that allows for P (prime) to have to be <= K  allowing for efficiency! We also interpreted n^2 as just a perfect square helping with interpretation and more than anything IMPLEMENTATION!
+This was all thanks to Vectors which was the building block for this project. As seen on! 
