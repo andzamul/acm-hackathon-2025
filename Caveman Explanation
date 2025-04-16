@@ -1,4 +1,4 @@
-What this program does is it converts the English sentences into caveman speech. It does this by entering a sentence and then making the next sentence sound like what a caveman would say. It gets rid of bigger, 
+What this program does is it converts the English sentences into caveman speech by letting the user choose which prompt they like. It does this by entering a sentence and then making the next sentence sound like what a caveman would say. It gets rid of bigger, 
 more complex words and makes them shorter and more concise. First, we looked at the sentences that were provided to us and analyzed the largest words. We then took those out if they were adjectives. Then, we
 saw what words could be changed to be simpler, like making "hot fudge" into "cocoa", since cocoa existed during the paleolithic period but hot fudge did not. Finally, we would keep the rest of the words, and shorten
 them only if necessary. One example we did was making "Marcus Halberstam" into just "Marcus", since the concept of a last name does not seem relevant to a caveman. We then coded the original sentences and their translations,
