@@ -1,69 +1,82 @@
 #include <iostream>
-#include <cmath>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
-/* -find numbers that disprove o = p + 2k^2
-   - program will find o, odd, and p, prime
-   - if k is not 0, that number will be the contradiction
-   -find prime numbers and store them, use Sieve of Eratosthenes algorithm
-   -go through that list and only check the odd numbers
- */
-
-bool isPrime(int n)
-{
-  { for(int i = 2; i <= n/2; i++)
-      if(n % i == 0)return false;}
-
+// Check if a number is prime
+bool isPrime(int n) {
+ //makes sure n is greater than 1
+    if (n < 2) return false;
+//calculates the square root of n and converts it to an integer
+    int sqrtN = static_cast<int>(sqrt(n));
+    for (int i = 2; i <= sqrtN; ++i) {
+        if (n % i == 0) return false;
+    }
     return true;
 }
 
-vector<int> findOddPrimes(int max)
-{
-  //vector<bool> primeFlag(max, true); //will check till max and sets flag to true
-  vector<int> primes;
-
-  //if primeFlag is still true, i will be added to vector prime list
-  for(int i = 3; i <= max; i++)
-    {if(isPrime(i))
-	primes.push_back(i);
-      /*      if(i%2 == 0)
-	      primes.pop_back(i);*/
-
-      //to take less time..
-      //if i is put into the prime vector, multiples of that number cannot be prime
-      //starts at 2nd multiple of i and adds i to get to the next multiple
-      //      for(int j = i *2; j <= max; j+=i)
-      //primeFlag(max,i) = false;
+// Generate all primes up to a limit using sieve HELPING WITH EFFICIENCY!!!
+vector<int> generatePrimes(int limit) {
+	//adds prime to vectore exept 0 and 1 since they are not prime
+    vector<bool> is_prime(limit + 1, true);
+    is_prime[0] = is_prime[1] = false;
+//sieve of eratosthenes
+    for (int i = 2; i * i <= limit; ++i) {
+        if (is_prime[i]) {
+            for (int j = i * i; j <= limit; j += i) {
+                is_prime[j] = false;
+            }
+        }
     }
-  
-  
-      return primes;
+//finds all primes and adds them to the vector
+    vector<int> primes;
+    for (int i = 2; i <= limit; ++i) {
+	    //adds prime to vector
+        if (is_prime[i]) primes.push_back(i);
+    }
+
+    return primes;
 }
 
-vector<int> findContradictions(vector<int> j)
-{
-  
-  for(int i = 0; i <= j.size() - 1; i++)
-    
-    }      
-  //rewrite the equation to find k^2
-  //k^2 = (o-p)/2
- 
+int main() {
+    int k;
+	//loops until user enters 0
+    cout << "Enter an odd composite number k: ";
+    cin >> k;
 
-int main()
-{
-  vector <int> primes;
-  vector <int> contradictions;
-  int max = 100;
+    if (k % 2 == 0 || isPrime(k)) {
+        cout << "The number must be an odd composite number.\n";
+        return 1;
+    }
 
-  primes = findOddPrimes(max);
+    // Generate primes up to k HEWLPING WITH EFFICIENCY!!!
+    vector<int> primes = generatePrimes(k);
 
-  contradictions = findContradictions(primes);
-  
-  for(int i = 0; i <= contradictions.size() - 1; i++)
-    cout << i + 1 << ": " << contradictions[i] << endl;
-  
-  return 0;
+    bool found = false;
+	//tracks if we found a solution
+    for (int p : primes) {
+	     //loops through p up to K!
+        if (p >= k) break;
+        //EFFICIENCY!!!
+        //math
+        int remainder = k - p;
+        if (remainder % 2 == 0) {
+            int square = remainder / 2;
+            int root = static_cast<int>(sqrt(square));
+            if (root * root == square) {
+		     //if the square root of the square is equal to the square then it is a perfect square
+                cout << k << " = " << p << " + 2 * (" << root << ")^2\n";
+                found = true;
+                break;
+            }
+        }
+    }
+//if the number cannot be written as p + 2 * n^2 then it outputs the counterexample to the conjecture
+        //this is the main part of the program
+    if (!found) {
+        cout << k << " cannot be written as p + 2 * n^2 (counterexample to the conjecture).\n";
+    }
+
+    return 0;
 }
